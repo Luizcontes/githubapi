@@ -1,1 +1,3 @@
-console.log('Hello World!')
+import GitService from './services/gitService.js'
+
+GitService.getRepos('luizcontes')
