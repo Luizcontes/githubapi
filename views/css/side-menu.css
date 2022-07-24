@@ -1,0 +1,241 @@
+#side-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 0;
+    min-height: 100vh;
+    color: black;
+    transition: .5s;
+    z-index: 1;
+}
+
+#side-menu.active {
+    background: #aaa;
+    width: 400px;
+
+    /* padding-top: 70px; */
+}
+
+.sobre {
+    background-color: #888;
+    height: 80px;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#logo {
+    height: 50px;
+    margin: 5px 120px;
+    border: #888 solid 1px;
+}
+#logo:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #555;
+    border: #555 solid 1px;
+}
+
+#logo img {
+    height: 30px;
+    margin: 10px;
+}
+
+.opcoes {
+    padding: 20px;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.anchor {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 7px;
+    justify-content: center;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.anchor p {
+    margin: auto;
+    font-weight: bold;
+    padding-left: 3px;
+    color: rgb(80, 74, 74);
+}
+
+.git #svg {
+    fill: rgb(80, 74, 74);
+    transition: 300ms;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.git:hover {
+    background: #171515;
+}
+
+.git:hover>#svg {
+    cursor: pointer;
+    fill: #171515;
+    background: #888;
+    color: #888;
+    border: 1px solid;
+}
+
+.git:hover>p {
+    color: #888;
+}
+
+.linkedin #svg {
+    fill: rgb(80, 74, 74);
+    background: #aaa;
+    transition: 300ms;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.linkedin:hover {
+    background: #0072b1;
+}
+
+.linkedin:hover>#svg {
+    cursor: pointer;
+    fill: #0072b1;
+    color: #aaa;
+    border: 1px solid;
+}
+
+.linkedin:hover>p {
+    color: #aaa;
+}
+
+.whatsapp #svg {
+    fill: rgb(80, 74, 74);
+    background: #aaa;
+    transition: 300ms;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.whatsapp:hover {
+    background-color: #25D366;
+}
+
+.whatsapp:hover #svg {
+    cursor: pointer;
+    fill: #25D366;
+    color: #aaa;
+    border: 1px solid;
+}
+
+.whatsapp:hover>p {
+    color: #aaa;
+}
+
+form {
+    width: 100%;
+    padding-top: 40px;
+}
+
+form h1 {
+    padding-bottom: 5px;
+}
+
+#mensagem {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    resize: none;
+    outline: none;
+    font-size: 1.2em;
+    color: black;
+    border-radius: 5px;
+}
+
+#email-field {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+    width: auto;
+}
+
+#email,
+#button {
+    display: flex;
+    color: black;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+#email {
+    outline: none;
+    width: 80%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: rgba(116, 125, 129, 0.8);
+}
+
+#button {
+    outline: none;
+    width: 20%;
+    border: rgba(116, 125, 129, 0.8);
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgba(116, 125, 129, 0.6);
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: rgba(116, 125, 129, 0.8);
+}
+
+#button:active {
+    cursor: pointer;
+    color: white;
+    background-color: rgba(116, 125, 129, 1);
+    transform: scale(1.03);
+}
+
+.response {
+    width: 100%;
+    height: 70px;
+    color: #555;
+    font-weight: bold;
+    text-align: center;
+    line-height: 70px;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.verde {
+    background-color: #67fd9e;
+    animation: fadeinout 4s linear forwards;
+}
+
+.vermelho {
+    background-color: rgb(243, 135, 135);
+    animation: fadeinout 5s linear forwards;
+}
+
+@keyframes fadeinout {
+    0%, 100% { opacity: 0;}
+    30% { opacity: 1;}
+}

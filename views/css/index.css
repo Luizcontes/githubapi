@@ -1,0 +1,154 @@
+@import "lightbox.css";
+@import "side-menu.css";
+@import "card.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    height: 100%;
+    width: 950px;
+    margin: 0 auto;
+    /* background: linear-gradient(rgba(150, 150, 150, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%), url('../img/background.jpg'); */
+    background: rgb(116, 195, 248);
+    background-image: linear-gradient(to right,  rgb(58, 156, 221), rgb(131, 169, 194), rgb(62, 145, 201));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu-btn {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+}
+
+.menu-btn_burger {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-btn_burger::after {
+    transform: translateY(16px);
+}
+
+/* ANIMATION */
+
+.menu-btn.open .menu-btn_burger {
+    background: transparent;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+    transform: rotate(45deg)
+}
+
+.menu-btn.open .menu-btn_burger::after {
+    transform: rotate(-45deg)
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 28px auto;
+}
+
+.projects svg {
+    box-shadow: 5px 5px 0 #888;
+    border-radius: 50%;
+    background: #555;
+}
+
+.projects svg:hover {
+    cursor: pointer;
+}
+
+.projects svg:active {
+    box-shadow: none;
+    transform: scale(0.95);
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px #888;
+    
+}
+
+.principal:hover {
+    cursor: pointer;
+    box-shadow: 7px 7px 3px #888;
+    transform: scale(1.02);
+    transition: .3s ease-in-out;
+}
+
+#title,
+.preview {
+    margin: 0 auto;
+}
+
+#title {
+    background: #888;
+    color: #555;
+    font-weight: bold;
+    font-size: 2em;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.preview {
+    height: auto;
+    width: 100%;
+}
+
+.preview img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 20vw;
+    height: 85vh;
+    min-height: 35vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

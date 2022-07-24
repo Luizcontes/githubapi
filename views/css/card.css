@@ -1,0 +1,85 @@
+#card {
+    display: flex;
+    flex-direction: center;
+    align-self: center;
+    justify-content: center;
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 3;
+}
+
+#card.hidden {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#webpage:link,
+#webpage:visited,
+#webpage:hover,
+#webpage:active {
+    text-decoration: none;
+}
+
+#repository:link,
+#repository:visited,
+#repository:hover,
+#repository:active {
+    text-decoration: none;
+}
+
+.button {
+    width: 200px;
+    height: 70px;
+    margin: 30px;
+    color: #555;
+    background: #aaa;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    border: #aaa solid 1px;
+    border-radius: 15px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #888;
+    border: #888;
+    color: #333;
+}
+
+#close2 {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    top: 0.5em;
+    right: 0.5em;
+    background: rgb(50, 50, 50);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+}
+
+#close2:hover {
+    background: black;
+    cursor: pointer;
+}
+
+#close2:active {
+    transform: scale(1.1);
+}
+
+#close2::after {
+    content: "X";
+}
